@@ -1,16 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatGridListModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { NgArithmeticOperationsModule } from 'ng-arithmetic-operations';
+import { PanelDisplayComponent } from './components/panel-display/panel-display.component';
+import { PanelButtonsComponent } from './components/panel-buttons/panel-buttons.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PanelDisplayComponent,
+    PanelButtonsComponent
   ],
   imports: [
     BrowserModule,
-    NgArithmeticOperationsModule
+    BrowserAnimationsModule,
+    NgArithmeticOperationsModule,
+    MatButtonModule, 
+    MatGridListModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
