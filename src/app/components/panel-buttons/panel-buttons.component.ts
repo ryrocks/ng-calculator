@@ -16,8 +16,8 @@ export class PanelButtonsComponent implements OnInit {
     
   }
 
-  onButtonClick(value: string) {
-    this._ngAOService.inputValue(value);
+  onButtonClick(key: string) {
+    this._ngAOService.inputKey(key);
   }
 
   onResetClick() {
