@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 
 import { PanelButtonsComponent } from './panel-buttons.component';
 import { By } from "@angular/platform-browser";
@@ -28,17 +28,26 @@ describe('PanelButtonsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it("should call onButtonClick ", fakeAsync(() => {
-    // const onClickMock = spyOn(component, 'onButtonClick');
-    // fixture.debugElement.query(By.css('button')).triggerEventHandler('click', null);
-    // expect(onClickMock).toHaveBeenCalled();
+  it('should call onButtonClick', fakeAsync(() => {
+    fixture.detectChanges();
+    spyOn(component, 'onButtonClick');
+    let btn = fixture.debugElement.queryAll(By.css('.normalBtn'));
+    for (let i = 0; i < btn.length; i++) {
+      btn[i].triggerEventHandler('click', null);
+    }
+    
+    tick(); // simulates the passage of time until all pending asynchronous activities finish
+    fixture.detectChanges();
+    expect(component.onButtonClick).toHaveBeenCalled();
   }));
 
-  it("should call onResetClick ", async(() => {
-    // let response: string = '0';
-    // spyOn(ngAOService, 'getExpression').and.returnValue(of(response));
-    // component.getExpression();
-    // fixture.detectChanges();
-    // expect(component.displayNum).toEqual(response);
+  it("should call onResetClick ", fakeAsync(() => {
+    fixture.detectChanges();
+    spyOn(component, 'onResetClick');
+    let btn = fixture.debugElement.query(By.css('.resetBtn'));
+    btn.triggerEventHandler('click', null);
+    tick(); // simulates the passage of time until all pending asynchronous activities finish
+    fixture.detectChanges();
+    expect(component.onResetClick).toHaveBeenCalled();
   }));
 });
