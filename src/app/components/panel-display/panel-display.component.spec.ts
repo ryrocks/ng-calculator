@@ -15,6 +15,10 @@ describe('PanelDisplayComponent', () => {
       .compileComponents();
   }));
 
+  it('should create panel-display component', () => {
+    expect(component).toBeTruthy();
+  });
+
   beforeEach(() => {
     fixture = TestBed.createComponent(PanelDisplayComponent);
     component = fixture.componentInstance;
@@ -22,7 +26,7 @@ describe('PanelDisplayComponent', () => {
     ngAOService = new NgArithmeticOperationsService();
   });
 
-  it("should call getExpression and return displayNum in string type", async(() => {
+  it('should call getExpression and return displayNum in string type', async(() => {
     let response: string = '0';
     spyOn(ngAOService, 'getExpression').and.returnValue(of(response));
     component.getExpression();
@@ -30,7 +34,7 @@ describe('PanelDisplayComponent', () => {
     expect(component.displayNum).toEqual(response);
   }));
 
-  it("should call getErrorMsg and return erroMsg in ErrorMsg type", async(() => {
+  it('should call getErrorMsg and return erroMsg in ErrorMsg type', async(() => {
     let response: ErrorMsg = <ErrorMsg>{};
     spyOn(ngAOService, 'getErrorMsg').and.returnValue(of(response));
     component.getExpression();

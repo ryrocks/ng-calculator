@@ -17,12 +17,14 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
+
   it('should render div', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('div')).toBeTruthy();
   }));
+
   it('should render app-panel-display inside div', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const compiled = fixture.debugElement.nativeElement;

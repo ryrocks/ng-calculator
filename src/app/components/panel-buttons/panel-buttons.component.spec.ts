@@ -24,7 +24,7 @@ describe('PanelButtonsComponent', () => {
     ngAOService = new NgArithmeticOperationsService();
   });
 
-  it('should create', () => {
+  it('should create panel-buttons component', () => {
     expect(component).toBeTruthy();
   });
 
