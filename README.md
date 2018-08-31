@@ -2,13 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
 
-## Demo Link
+## Demo 
+
+[Link](https://ryrocks.github.io/ng-calculator/)
 
 
-## TODO TASK
-1. TestCafe for UI automation test
-2. Implement Extra buttons
-3. UI enhancement
+## Todo Task
+
+1. Error Message
+2. TestCafe for UI automation test
+3. Implement Extra buttons
+4. UI enhancement
 
 ## Development server
 

@@ -17,8 +17,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    // console.log('AAAA', this._ngAOService.add(this.n1, this.n2));
-    // console.log('AAAA', this._ngAOService.minus(this.n1, this.n2));
 
   }
 }
