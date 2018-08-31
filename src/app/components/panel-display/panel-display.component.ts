@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgArithmeticOperationsService, ErrorMsg } from 'ng-arithmetic-operations';
+import { NgArithmeticOperationsService, ErrorMsg } from 'ng-arithmetic-operations/dist';
 
 @Component({
   selector: 'app-panel-display',

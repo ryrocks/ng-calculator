@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core
 import { PanelButtonsComponent } from './panel-buttons.component';
 import { By } from "@angular/platform-browser";
 import { of } from 'rxjs';
-import { NgArithmeticOperationsService } from 'ng-arithmetic-operations';
+import { NgArithmeticOperationsService } from 'ng-arithmetic-operations/dist';
 
 describe('PanelButtonsComponent', () => {
   let component: PanelButtonsComponent;

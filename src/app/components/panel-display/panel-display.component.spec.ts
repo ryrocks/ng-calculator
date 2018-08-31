@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { PanelDisplayComponent } from './panel-display.component';
 import { of } from 'rxjs';
-import { NgArithmeticOperationsService, ErrorMsg } from 'ng-arithmetic-operations';
+import { NgArithmeticOperationsService, ErrorMsg } from 'ng-arithmetic-operations/dist';
 
 describe('PanelDisplayComponent', () => {
   let component: PanelDisplayComponent;
