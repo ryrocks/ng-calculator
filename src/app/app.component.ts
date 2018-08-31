@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgArithmeticOperationsService } from 'ng-arithmetic-operations/dist';
+import { NgArithmeticOperationsService } from 'ng-arithmetic-operations';
 
 @Component({
   selector: 'app-root',
